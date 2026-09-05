@@ -27,18 +27,18 @@ app = FastAPI(
 
 
 # CORS
-# Allow the deployed Vercel frontend and local development frontend to access the API.
+# Allow the live Vercel domains and local frontend to access the API.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://citifix-ai.vercel.app",
+        "https://citi-fix-l17g06w19-citi-fix-ai.vercel.app",
         "http://localhost:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Create the upload directory before serving uploaded images.
 Path("uploads").mkdir(parents=True, exist_ok=True)
 
