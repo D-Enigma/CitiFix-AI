@@ -27,11 +27,12 @@ app = FastAPI(
 
 
 # CORS
-# Allow the deployed Vercel frontend to communicate with the backend.
+# Allow the deployed Vercel frontend and local development frontend to access the API.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://citi-fix-az1z4lqwq-citi-fix-ai.vercel.app",
+        "https://citifix-ai.vercel.app",
+        "http://localhost:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
