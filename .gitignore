@@ -1,0 +1,34 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Runtime uploaded complaint images
+citifix-backend/uploads/*
+!citifix-backend/uploads/.gitkeep
+
+# Node dependencies
+frontend/node_modules/
+
+# Frontend build output
+frontend/dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/

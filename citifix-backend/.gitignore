@@ -1,0 +1,16 @@
+# Environment secrets
+.env
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Runtime uploaded complaint images
+uploads/*
+
+# Keep the uploads directory itself
+!uploads/.gitkeep
