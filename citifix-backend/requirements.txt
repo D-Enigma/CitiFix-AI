@@ -1,8 +1,20 @@
+# FastAPI web framework and production server
 fastapi
 uvicorn[standard]
+
+# Handle file uploads and environment variables
 python-multipart
 python-dotenv
+
+# MongoDB database and Beanie ODM
 pymongo
 beanie
+
+# JWT authentication
 python-jose[cryptography]
-passlib[bcrypt]
+
+# Secure password hashing with Argon2
+pwdlib[argon2]
+
+# YOLO / AI image detection
+ultralytics
