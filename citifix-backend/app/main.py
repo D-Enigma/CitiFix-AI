@@ -27,14 +27,14 @@ app = FastAPI(
 
 
 # CORS
-# Allow the live Vercel domains and local frontend to access the API.
+# Allow the main Vercel domain, Vercel deployment URLs, and local development.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://citifix-ai.vercel.app",
-        "https://citi-fix-l17g06w19-citi-fix-ai.vercel.app",
         "http://localhost:5173",
     ],
+    allow_origin_regex=r"https://citi-fix-[a-z0-9]+-citi-fix-ai\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
